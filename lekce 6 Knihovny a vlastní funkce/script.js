@@ -1,5 +1,8 @@
 //------------------------ Cvičení 1 Základní validace ---------------------------------------------
+// console.log(validator);
 // const odstavec = document.querySelector(".msg");
+// const email = "uzlabini@gmail.com"
+// console.log(validator.isEmail(email))
 // const email = prompt("Zadajte vasu emeilovu adresu");
 // const card = prompt("Zadejte cislo karty");
 // if (validator.isEmail(email)) {
@@ -23,10 +26,16 @@
 // }
 
 //------------------------ Cvičení 3 Obsah elipsy ---------------------------------------------------
-// const ellipseArea = (width, heigth) =>{
-//   return (width*0.5)*(heigth*0.5)*Math.PI;
-// }
-// document.body.innerHTML = `<p>Obsah elipsy je: ${ellipseArea(2,2)}</p>`;
+const ellipseArea = (width, heigth) =>{
+  const result =  (width*0.5)*(heigth*0.5)*Math.PI;
+     return result;
+}
+document.body.innerHTML = `<p>Obsah elipsy je: ${ellipseArea(2,2)}</p>`;
+
+// console.log((()=> {
+//     // ваш код анонимной функции здесь
+//     return "Результат выполнения функции";
+// })());
 
 // ------------------------ Cvičení 4 Maximum ze dvou čísel---------------------------------------
 // const max2 = (a, b) => {
@@ -63,7 +72,7 @@
 
 // isDIC("0012345678CZ");
 
-// ----------------------------------------- Doporučené úložky na doma 1 Parsování data
+// ----------------------------------- Doporučené úložky na doma 1 Parsování data
 
 // const persDate = (str) => {
 //   const parcel = str.split(".");
