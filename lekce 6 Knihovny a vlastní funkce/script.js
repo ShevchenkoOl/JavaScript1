@@ -1,3 +1,4 @@
+
 //------------------------ Cvičení 1 Základní validace ---------------------------------------------
 // console.log(validator);
 // const odstavec = document.querySelector(".msg");
@@ -26,11 +27,11 @@
 // }
 
 //------------------------ Cvičení 3 Obsah elipsy ---------------------------------------------------
-const ellipseArea = (width, heigth) =>{
-  const result =  (width*0.5)*(heigth*0.5)*Math.PI;
-     return result;
-}
-document.body.innerHTML = `<p>Obsah elipsy je: ${ellipseArea(2,2)}</p>`;
+// const ellipseArea = (width, heigth) =>{
+//   const result =  (width*0.5)*(heigth*0.5)*Math.PI;
+//      return result;
+// }
+// document.body.innerHTML = `<p>Obsah elipsy je: ${ellipseArea(1,2)}</p>`;
 
 // console.log((()=> {
 //     // ваш код анонимной функции здесь
@@ -143,7 +144,6 @@ document.body.innerHTML = `<p>Obsah elipsy je: ${ellipseArea(2,2)}</p>`;
 //     "Neplatná hodnota pro dovednost JavaScript. Zadejte prosím číslo v rozsahu 0-100."
 //   );
 // }
-
 // function updateSkill(skillId, value) {
 //   const progressBar = document.querySelector(`#${skillId} .skill__progress`);
 //   const skillValue = document.querySelector(`#${skillId} .skill__value`);
@@ -151,6 +151,8 @@ document.body.innerHTML = `<p>Obsah elipsy je: ${ellipseArea(2,2)}</p>`;
 //   progressBar.style.width = `${value}%`;
 //   skillValue.textContent = `${value} / 100`;
 // }
+
+
 
 //---------------------------- Dobrovolné úložky na doma Maximum ze tří čísel
 // function max3 (a, b, c) {
