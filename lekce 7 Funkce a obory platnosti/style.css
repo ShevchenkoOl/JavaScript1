@@ -25,3 +25,42 @@
     padding: 1rem 2rem;
     color: #444;
   }
+
+    
+  body {
+    color: #666;
+  }
+  
+    .plans {
+    display: flex;
+    flex-direction: row;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+  
+  .plan {
+    flex: 1;
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #aaa;
+    text-align: center;
+  }
+  
+  .plan h2 {
+    color: blueviolet;
+  }
+  
+  .plan p {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .plan--selected {
+    background-color: blueviolet;
+    color: white;
+  }
+  
+  .plan--selected h2 {
+    color: white;
+  }

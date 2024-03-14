@@ -19,7 +19,7 @@
 //     const closingElm = document.querySelector('.email__closing');
 //     closingElm.textContent = goodbye(name);
 //   };
-  
+
 //   fillSubject('Nepřišly gumičky');
 //   fillBody(
 //     'Nepřišly gumičky. A co na to počítač? Mlčí. No tak to je konec. Všecko vylejt.',
@@ -29,7 +29,7 @@
 //--------------------------------------- Cvičení 3 Převod měny
 // const convertToCZK = (amount, currency) => {
 //     let rate;
-  
+
 //     if (currency === 'EUR') {
 //       rate = 24.47;
 //     } else if (currency === 'GBP') {
@@ -41,15 +41,15 @@
 //     } else {
 //       return null;
 //     }
-  
+
 //     return Math.round(rate * amount);
 //   };
-  
+
 //   document.body.innerHTML += `100 € je ${convertToCZK(100, 'EUR')} Kč<br>`;
 //   document.body.innerHTML += `£ 100 je ${convertToCZK(100, 'GBP')} Kč<br>`;
 //   document.body.innerHTML += `$ 100 je ${convertToCZK(100, 'USD')} Kč<br>`;
 //   document.body.innerHTML += `100 bitcoinů je ${convertToCZK(100, 'BTC')} Kč<br>`;
- 
+
 //-------------------------------------------Cvičení 4 Porozumění kódu
 // //Úryvek 1:
 // const name = 'Mississippi';
@@ -86,11 +86,6 @@
 
 // document.body.innerHTML += `<p>${price}</p>`;
 // //price is not defined
-
-
-
-
-
 
 //-----------------------------second option
 
@@ -133,8 +128,6 @@
 //   document.body.innerHTML += `<p>${message}</p>`;
 // }
 
-
-
 //-------------------------calculate
 
 // const calculate = (number1, operation, number2) => {
@@ -157,9 +150,6 @@
 
 // calculate(3,'&',3);
 
-
-
-
 //----------------------Výplňořez
 
 // const fillcut = (str, len) => {
@@ -176,8 +166,6 @@
 
 // fillcut('petr', 2)
 
-
-
 //---------------------------přestupný rok
 
 // const isLeapYear = (year) => {
@@ -189,3 +177,24 @@
 
 // };
 // console.log(isLeapYear(2023));
+
+//------------------------------------------------Doporučené úložky na doma 3 Cenik
+const plan1 = document.querySelector("#plan1");
+const plan2 = document.querySelector("#plan2");
+const plan3 = document.querySelector("#plan3");
+
+const selectPlan = (planNumber) => {
+  planNumber = Number(prompt("Vyberte tarif od 1 do 3: "));
+  plan1.classList.remove("plan--selected");
+  if (planNumber === 1) {
+    plan1.classList.add("plan--selected");
+  } else if (planNumber === 2) {
+    plan2.classList.add("plan--selected");
+  } else if (planNumber === 3) {
+    plan3.classList.add("plan--selected");
+  }
+  else {
+    alert("Neplatné číslo plánu.");
+  }
+};
+selectPlan();
