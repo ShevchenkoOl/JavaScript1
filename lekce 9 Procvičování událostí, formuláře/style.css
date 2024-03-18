@@ -1,0 +1,42 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #D6D6D6;
+	font-family: sans-serif;
+	margin: 2em 1em;
+	line-height: 1.3;
+}
+
+form {
+	max-width: 22em;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	padding: 2em;
+	border-radius: 1em;
+}
+
+p:first-child {
+	margin-top: 0;
+}
+
+input,
+button {
+	font-size: 1em;
+	font-family: inherit;
+	height: 2em;
+	padding: 0 1em;
+	border-radius: 0.25em;
+	border: 0.0625em solid #888888;
+}
+
+button {
+	background-color: #DD5400;
+	color: #FFFFFF;
+	border-color: transparent;
+}
+
+input {
+	width: 11em;
+}

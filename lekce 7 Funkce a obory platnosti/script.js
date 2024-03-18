@@ -179,22 +179,42 @@
 // console.log(isLeapYear(2023));
 
 //------------------------------------------------Doporučené úložky na doma 3 Cenik
-const plan1 = document.querySelector("#plan1");
-const plan2 = document.querySelector("#plan2");
-const plan3 = document.querySelector("#plan3");
+// const plan1 = document.querySelector("#plan1");
+// const plan2 = document.querySelector("#plan2");
+// const plan3 = document.querySelector("#plan3");
 
-const selectPlan = (planNumber) => {
-  planNumber = Number(prompt("Vyberte tarif od 1 do 3: "));
-  plan1.classList.remove("plan--selected");
-  if (planNumber === 1) {
-    plan1.classList.add("plan--selected");
-  } else if (planNumber === 2) {
-    plan2.classList.add("plan--selected");
-  } else if (planNumber === 3) {
-    plan3.classList.add("plan--selected");
-  }
-  else {
-    alert("Neplatné číslo plánu.");
-  }
-};
-selectPlan();
+// const selectPlan = (planNumber) => {
+//   planNumber = Number(prompt("Vyberte tarif od 1 do 3: "));
+//   plan1.classList.remove("plan--selected");
+//   if (planNumber === 1) {
+//     plan1.classList.add("plan--selected");
+//   } else if (planNumber === 2) {
+//     plan2.classList.add("plan--selected");
+//   } else if (planNumber === 3) {
+//     plan3.classList.add("plan--selected");
+//   }
+//   else {
+//     alert("Neplatné číslo plánu.");
+//   }
+// };
+// selectPlan();
+
+
+function selectPlan(planNumber) {
+
+  const plans = document.querySelectorAll('.plan');
+
+
+  plans.forEach(plan => {
+      if (plan.id === `plan${planNumber}`) {
+          plan.classList.add('plan--selected');
+      } else {
+          plan.classList.remove('plan--selected');}
+          });
+      }
+
+const planElements = document.querySelectorAll('.plan');
+  planElements.forEach((plan, index) => {
+  plan.addEventListener('click', () => {
+  selectPlan(index + 1); });
+      });
