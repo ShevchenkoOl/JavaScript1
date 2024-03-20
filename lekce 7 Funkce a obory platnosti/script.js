@@ -179,22 +179,33 @@
 // console.log(isLeapYear(2023));
 
 //------------------------------------------------Doporučené úložky na doma 3 Cenik
-const plan1 = document.querySelector("#plan1");
-const plan2 = document.querySelector("#plan2");
-const plan3 = document.querySelector("#plan3");
+// const plan1 = document.querySelector("#plan1");
+// const plan2 = document.querySelector("#plan2");
+// const plan3 = document.querySelector("#plan3");
 
-const selectPlan = (planNumber) => {
-  planNumber = Number(prompt("Vyberte tarif od 1 do 3: "));
-  plan1.classList.remove("plan--selected");
-  if (planNumber === 1) {
-    plan1.classList.add("plan--selected");
-  } else if (planNumber === 2) {
-    plan2.classList.add("plan--selected");
-  } else if (planNumber === 3) {
-    plan3.classList.add("plan--selected");
+// const selectPlan = (planNumber) => {
+//   planNumber = Number(prompt("Vyberte tarif od 1 do 3: "));
+//   plan1.classList.remove("plan--selected");
+//   if (planNumber === 1) {
+//     plan1.classList.add("plan--selected");
+//   } else if (planNumber === 2) {
+//     plan2.classList.add("plan--selected");
+//   } else if (planNumber === 3) {
+//     plan3.classList.add("plan--selected");
+//   }
+//   else {
+//     alert("Neplatné číslo plánu.");
+//   }
+// };
+// selectPlan();
+
+//----------version 2
+selectPlan = (planNumber) =>  {
+  const plan = document.getElementById(`plan${planNumber}`)
+  const odebratVyber = document.querySelectorAll(".plan")
+  odebratVyber.forEach(item => {
+      item.classList.remove('plan--selected')})
+  plan.classList.add('plan--selected');
   }
-  else {
-    alert("Neplatné číslo plánu.");
-  }
-};
-selectPlan();
+
+selectPlan(2);
