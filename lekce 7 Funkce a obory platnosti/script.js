@@ -198,14 +198,3 @@
 //   }
 // };
 // selectPlan();
-
-//----------version 2
-selectPlan = (planNumber) =>  {
-  const plan = document.getElementById(`plan${planNumber}`)
-  const odebratVyber = document.querySelectorAll(".plan")
-  odebratVyber.forEach(item => {
-      item.classList.remove('plan--selected')})
-  plan.classList.add('plan--selected');
-  }
-
-selectPlan(2);

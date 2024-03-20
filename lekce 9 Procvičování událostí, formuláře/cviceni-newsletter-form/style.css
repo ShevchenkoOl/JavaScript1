@@ -1,0 +1,14 @@
+/* Používáme intuitivní výpočet rozměrů prvků. */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 20rem;
+  margin-right: auto;
+  margin-left: auto;
+}
