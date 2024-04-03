@@ -1,0 +1,1 @@
+console.log('Jenom pro O nas');
