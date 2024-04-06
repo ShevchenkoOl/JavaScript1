@@ -10,25 +10,25 @@
 // form.addEventListener('submit', prihlas);
 
 // ----------------------------- Cvičení 2 Základy formulářů: Kalkulačka ----------------------
-const handleDigitClick = (event) => {
-    const display = document.querySelector('.display');
-    let digit = event.target.textContent;
-    if (display.textContent === '0' && digit.length <= 9) {
-        display.textContent = digit;
-     } else if (display.textContent.length<9) {
-         display.textContent += digit;
-     }
-};
+// const handleDigitClick = (event) => {
+//     const display = document.querySelector('.display');
+//     let digit = event.target.textContent;
+//     if (display.textContent === '0' && digit.length <= 9) {
+//         display.textContent = digit;
+//      } else if (display.textContent.length<9) {
+//          display.textContent += digit;
+//      }
+// };
 
-  // Získáme všechny prvky s třídou "btn-num"
-  const buttons = document.querySelectorAll('.btn-num');
+//   // Získáme všechny prvky s třídou "btn-num"
+//   const buttons = document.querySelectorAll('.btn-num');
 
-  // Projdeme každý prvek a navážeme na něj udalost kliknutí
-  buttons.forEach(button => {
-    button.addEventListener('click', handleDigitClick);
-  });
+//   // Projdeme každý prvek a navážeme na něj udalost kliknutí
+//   buttons.forEach(button => {
+//     button.addEventListener('click', handleDigitClick);
+//   });
 
-  //--------------------------------------------verze 2
+//--------------------------------------------verze 2
 // const display = document.querySelector('.display');
 // const btn0 = document.querySelector('#btn-0');
 // const btn1 = document.querySelector('#btn-1');
@@ -63,11 +63,13 @@ const handleDigitClick = (event) => {
 // btn9.addEventListener('click', handleDigitClick);
 
 //------------------------------Cvičení: Složitější formuláře Objednávka --------------------------------------------------------------
-// const formular = document.querySelector('form');
-// formular.addEventListener('submit', (event) => {
-//   event.preventDefault();
-//   formular.innerHTML = `
-//       <h1>Hotovo</h1>
-//       <p>Objednávka odeslána ke zpracování.</p>
-//    `;
-// });
+ const formular = document.querySelector("form");
+formular.addEventListener("submit", (event) => {
+  event.preventDefault();
+  formular.innerHTML = `
+      <h1>Hotovo</h1>
+      <p>Objednávka odeslána ke zpracování.</p>
+   `;
+  const dopravaSelect = document.querySelector("select");
+  console.log(dopravaSelect.value);
+});
