@@ -31,7 +31,7 @@ We will practice what we have learned so far in JavaScript on a fictitious web p
    
 ## How to Use the Repository
 
-1. Clone the repository: `git clone https://github.com/ShevchenkoOl/-vod-do-programov-n-Python.git`
+1. Clone the repository: `git clone https://github.com/ShevchenkoOl/JavaScript1.git`
 
 2. Navigate to the relevant section to explore the corresponding material.
 
