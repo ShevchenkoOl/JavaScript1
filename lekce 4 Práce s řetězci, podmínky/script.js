@@ -48,7 +48,7 @@ document.body.innerHTML += `<h1>lekce 4 Práce s řetězci, podmínky</h1>`;
 
 // --------------------------------------cvičení 3 Doručování
 // const street = prompt("Zadejte ulici:");
-// const houseNumber = prompt("Zadejte číslo domu:");
+// const houseNumber = Number(prompt("Zadejte číslo domu:"));
 // const city = prompt("Zadejte město:");
 // const zipCode = prompt("Zadejte PSČ:");
 
@@ -192,6 +192,6 @@ document.body.innerHTML += `<h1>lekce 4 Práce s řetězci, podmínky</h1>`;
 // let number = 5.589855478554;
 // console.log(number.toFixed(3)); // 5.590
 // console.log(number.toFixed(1)); // 5.6
-const jmeno = prompt("Zadejte Vaše křestní jméno bez diakritiky:").toLowerCase();
-const prijmeni = prompt("Zadejte Vaše příjmení bez diakritiky:").toLowerCase();
-console.log(jmeno, prijmeni);
+// const jmeno = prompt("Zadejte Vaše křestní jméno bez diakritiky:").toLowerCase();
+// const prijmeni = prompt("Zadejte Vaše příjmení bez diakritiky:").toLowerCase();
+// console.log(jmeno, prijmeni);
