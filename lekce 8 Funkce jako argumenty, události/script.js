@@ -1,3 +1,29 @@
+// const odmena = (pocetLet) => {
+//     if(pocetLet < 5) {
+//         return 1000
+//     } else if(pocetLet < 10) {
+//         return 3000
+//     } else if(pocetLet < 15) {
+//         return 5000
+//     } else {
+//         return 10000
+//     }
+// }
+
+// const uzivHodinovka = 300
+
+// const plat = (hodinovka, pocetHodin, pocetLet) => {
+//     return hodinovka * pocetHodin + odmena(pocetLet)
+// }
+
+// const plat2 = (hodinovka, pocetHodin, pocetLet, fceOdmena) => {
+//     console.log(fceOdmena)
+//     return hodinovka * pocetHodin + fceOdmena(pocetLet)
+// }
+
+// console.log(plat(uzivHodinovka, 160, 3))
+// console.log(plat2(uzivHodinovka, 160, 3, odmena))
+// console.log(odmena)
 //-------------------------------------------------------- Cvičení 1 Hesla
 //---------------------------------template
 // const weakPassword = (len) => {
