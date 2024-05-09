@@ -44,7 +44,7 @@
 // }
 // document.body.innerHTML = max2(5,15);
 
-// ------------------------ mžnost 2----------------------------------------------------
+// ------------------------ možnost 2----------------------------------------------------
 // const max3 = (a, b) => {
 //   if (a > b) {return a;}
 //   return b;
@@ -74,6 +74,16 @@
 // isDIC("0012345678CZ");
 
 // ----------------------------------- Doporučené úložky na doma 1 Parsování data
+// ------------------------ možnost 1----------------------------------------------------
+// const parseDate = (datum) => {
+//     return {
+//       day: Number(datum.slice(0, 2)),
+//       month: Number(datum.slice(3, 5)),
+//       year: Number(datum.slice(6)),
+//     };
+//   };
+
+// ------------------------ možnost 2----------------------------------------------------
 
 // const persDate = (str) => {
 //   const parcel = str.split(".");
