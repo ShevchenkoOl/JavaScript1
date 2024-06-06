@@ -1,3 +1,26 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
 body {
-    background-color: blue;
+	max-width: 50rem;
+	margin-inline: auto;
+	font-family: sans-serif;
+	padding-inline: 1rem;
+}
+
+#identifikatory:empty::before {
+	content: 'Zde budou identifikátory oddělené čárkou.';
+	color: red;
+}
+
+#emaily:empty::before {
+	content: 'Zde budou e-mailové adresy oddělené čárkou.';
+	color: red;
 }
