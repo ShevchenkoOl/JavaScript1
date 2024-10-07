@@ -2,7 +2,7 @@
 // const celeJmeno = prompt("Jake je vase jmeno a primeni?");
 // const vek = Number(prompt("Jaky je vas vek?"));
 
-// document.body.innerHTML += "<p>" + celeJmeno + ", vek: " + vek + "</p>";
+// document.body.innerHTML = celeJmeno + ", vek: " + vek;
 // alert(celeJmeno + ", vek: " + vek); 
 
 // -------------------Cvičení 2: Výplata jako stránka
@@ -24,32 +24,37 @@
 
 // console.log(trida)
 
-// const apartment = {
-//     type: 'rent',
-//     disposition: '3+1',
-//     area: {
-//       floorage: 100,
-//       balcony: 2,
-//       units: 'sqm',
-//     },
-//     city: 'Prague',
-//     district: 'Old Town',
-//     price: {
-//       rent: 28000,
-//       fees: {
-//         water: 1000,
-//         energy: 2500,
-//         services: 560,
-//       },
-//       currency: 'czk',
-//     },
-//     ownership: 'personal',
-//     condition: 'renovated',
-//     status: 'free',
-//     floor: 3,
-//   };
-//   ​
-//   document.body.innerHTML += "<p>Dispozice: "+ apartment.disposition +"</p>"
+const apartment = {
+    type: 'rent',
+    disposition: '3+1',
+    area: {
+      floorage: 100,
+      balcony: 2,
+      units: 'sqm',
+    },
+    city: 'Prague',
+    district: 'Old Town',
+    price: {
+      rent: 28000,
+      fees: {
+        water: 1000,
+        energy: 2500,
+        services: 560,
+      },
+      currency: 'czk',
+    },
+    ownership: 'personal',
+    condition: 'renovated',
+    status: 'free',
+    floor: 3,
+  };
+  let total = apartment.area.floorage + apartment.area.balcony;
+  console.log(total);
+  document.body.innerHTML += "<p>Vymera bytu: apartment: "+ apartment.area.floorage + apartment.area.units +"</br> balcony: "+apartment.area.balcony + apartment.area.units+ "</p>"
+  document.body.innerHTML += "<p>Celkova plocha bytu je:" + total + "sqm </p>"
+  document.body.innerHTML += apartment.area.floorage + apartment.area.balcony
+
+  //   document.body.innerHTML += "<p>Dispozice: "+ apartment.disposition +"</p>"
 //   document.body.innerHTML += "<p>Najem bez poplatku: "+ apartment.price.rent +"</p>"
 //   document.body.innerHTML += "<p>Vymera bytu: "+ apartment.area.floorage + apartment.area.units +"</p>"
 //   ​
