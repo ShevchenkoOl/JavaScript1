@@ -32,8 +32,7 @@
 
 // ```js
 // // a.
-// const bodyElement = document.querySelector('body');
-// bodyElement.style.backgroundColor = '#e9e9e9';
+// l
 
 // // b.
 // const newsElm = document.querySelector('.news');
@@ -47,11 +46,13 @@
 
 // // d.
 // const firstPostElm = document.getElementById('zprava1');
-// firstPostElm.classLеist.add('post--main');
+// firstPostElm.classList.add('post--main');
 
 // // e.
 // const lastPostImgElm = document.querySelector('#zprava3 img');
+// console.log(lastPostImgElm);
 // lastPostImgElm.src = 'images/zprava3-novy.jpg';
+
 // ```
 
 
@@ -88,18 +89,18 @@
 // <summary><b>Řešení</b></summary>
 
 // ```js
-// const vysledek = document.querySelector('.vysledek');
-// const mince = document.querySelector('.mince');
+const vysledek = document.querySelector('.vysledek');
+const mince = document.querySelector('.mince');
 
-// const padlOrel = Math.random() < 0.5;
+const padlOrel = Math.random() < 0.5;
 
-// if (padlOrel) {
-//   vysledek.textContent = 'Padl orel';
-//   mince.classList.add('mince--orel');
-// } else {
-//   vysledek.textContent = 'Padla panna';
-//   mince.classList.add('mince--panna');
-// }
+if (padlOrel) {
+  vysledek.textContent = 'Padl orel';
+  mince.classList.add('mince--orel');
+} else {
+  vysledek.textContent = 'Padla panna';
+  mince.classList.add('mince--panna');
+}
 // ```
 
 
