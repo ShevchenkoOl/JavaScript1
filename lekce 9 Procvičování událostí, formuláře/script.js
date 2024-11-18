@@ -10,23 +10,33 @@
 // form.addEventListener('submit', prihlas);
 
 // ----------------------------- Cvičení 2 Základy formulářů: Kalkulačka ----------------------
-// const handleDigitClick = (event) => {
-//     const display = document.querySelector('.display');
-//     let digit = event.target.textContent;
-//     if (display.textContent === '0' && digit.length <= 9) {
-//         display.textContent = digit;
-//      } else if (display.textContent.length<9) {
-//          display.textContent += digit;
-//      }
-// };
+const handleDigitClick = (event) => {
+  const display = document.querySelector('.display');
+  let digit = event.target.textContent;
 
-//   // Získáme všechny prvky s třídou "btn-num"
-//   const buttons = document.querySelectorAll('.btn-num');
+  // Pokud je na displeji "0", nahradíme ji číslicí (nebo přidáme číslici, pokud už je něco jiného)
+  if (display.textContent === '0') {
+      display.textContent = digit;
+  } else if (display.textContent.length < 9) {
+      // Pokud délka textu není větší než 9, přidáme novou číslici na konec
+      display.textContent += digit;
+  }
+};
 
-//   // Projdeme každý prvek a navážeme na něj udalost kliknutí
-//   buttons.forEach(button => {
-//     button.addEventListener('click', handleDigitClick);
-//   });
+  // Získáme všechny prvky s třídou "btn-num"
+  const buttons = document.querySelectorAll('.btn-num');
+
+  // Projdeme každý prvek a navážeme na něj udalost kliknutí
+  buttons.forEach(button => {
+    button.addEventListener('click', handleDigitClick);
+  });
+
+const btnAc = document.querySelector('#btn-ac');
+
+btnAc.addEventListener('click', () => {
+  document.querySelector('.display').textContent = '0';
+});
+
 
 //--------------------------------------------verze 2
 // const display = document.querySelector('.display');
@@ -64,12 +74,32 @@
 
 //------------------------------Cvičení: Složitější formuláře Objednávka --------------------------------------------------------------
  const formular = document.querySelector("form");
+ const dopravaSelect = document.querySelector("select");
+ const cardNumber = document.querySelector("#card-input");
+
 formular.addEventListener("submit", (event) => {
   event.preventDefault();
-  formular.innerHTML = `
-      <h1>Hotovo</h1>
-      <p>Objednávka odeslána ke zpracování.</p>
-   `;
-  const dopravaSelect = document.querySelector("select");
-  console.log(dopravaSelect.value);
+
+  // Zobrazíme zprávu po odeslání formuláře
+  // formular.innerHTML = `
+  //     <h1>Hotovo</h1>
+  //     <p>Objednávka odeslána ke zpracování.</p>
+  //  `;
+  
+  // Bonus 1: Zobrazení hodnot vyplněných uživatelem
+  console.log(`Platební karta: ${cardNumber.value}`);
+  console.log(`Doprava: ${dopravaSelect.value}`);
+
+ // Bonus 2: Validace platební karty
+  const cardValue = cardNumber.value;
+
+  if (cardValue.length < 16) {
+    formular.innerHTML = `<p>Číslo karty je příliš krátké. Chybí ${16 - cardValue.length} číslic.</p>`;
+  } else if (cardValue.length > 16) {
+    formular.innerHTML = `<p>Číslo karty je moc dlouhé. Přebývá ${cardValue.length - 16} číslic.</p>`;
+  } else {
+    formular.innerHTML = `
+    <h1>Hotovo</h1>
+    <p>Objednávka odeslána ke zpracování.</p>
+ `;}
 });

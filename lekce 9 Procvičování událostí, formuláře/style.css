@@ -73,7 +73,8 @@ input {
   width: calc(9rem + 12px);
 }
 
-.btn-num {
+.btn-num, 
+.btn-ac {
   flex: 0 0 auto;
   width: 3rem;
 
@@ -86,15 +87,17 @@ input {
   user-select: none;
 }
 
-.btn-num--wide {
+.btn-num--wide{
   width: calc(6rem + 4px);
 }
 
-.btn-num:hover {
+.btn-num:hover, 
+.btn-ac:hover {
   background-color: #4d7f80;
 }
 
-.btn-num:active {
+.btn-num:active,
+.btn-ac:active {
   transform: scale(0.9);
 }
 
