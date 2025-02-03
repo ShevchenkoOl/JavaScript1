@@ -1,17 +1,34 @@
 // -------------------Cvičení 1: Očkování
 // const celeJmeno = prompt("Jake je vase jmeno a primeni?");
-// const vek = Number(prompt("Jaky je vas vek?"));
+// nebo
+// const name = String(prompt('Prosim vas zadejte svuje jmeno:'));
+// console.log(typeof name); // string
 
-// document.body.innerHTML = celeJmeno + ", vek: " + vek;
+// const vek = Number(prompt("Jaky je vas vek?"));
+// console.log(typeof vek, vek); // number, 85.6
+
+// const age = parseInt(prompt('Prosim zadejte svuj vek:')); // převede na celé číslo
+// console.log(typeof age, age); // number, 85
+
+// document.body.innerHTML += `<p> ${celeJmeno} ma ${vek} roky </p>`;
+// document.body.innerHTML += "<p>" + celeJmeno + ", vek: " + vek + </p>;
 // alert(celeJmeno + ", vek: " + vek); 
 
+
 // -------------------Cvičení 2: Výplata jako stránka
+// part 1
+// const sazba = Number(prompt('Prosim zadejte svuj hodinovou sazbu v korunách:'));
+// const hrubaMzda = sazba * 8 * 21;
+// document.body.innerHTML += '<p style="color: red; font-size:36px">' + hrubaMzda + '</p>'; // výjimečně můžeme zadat styl v přimo tagu
+//part 2
 // const hodinovaSazba = Number(prompt("Jaká je vaše hodinová sazba?"));
 // const pocetHodin = Number(prompt("Kolik hodin denně pracujete?"));
 // const pocetDni = Number(prompt("Kolik dní měsíčně pracujete?"));
 // document.body.innerHTML += "<p>Vaše vyplata činí " + (hodinovaSazba*pocetHodin*pocetDni) + " korun</p>";
 
-// -------------------Cvičení 3: Realitka
+
+
+// ----------------------------Objekty
 // const tridni = prompt("Zadej jmeno tridniho ucitele")
 // const nazevTridy = prompt("Zadej oznaceni tridy")
 // const trida = {
@@ -24,48 +41,42 @@
 
 // console.log(trida)
 
-const apartment = {
-    type: 'rent',
-    disposition: '3+1',
-    area: {
-      floorage: 100,
-      balcony: 2,
-      units: 'sqm',
-    },
-    city: 'Prague',
-    district: 'Old Town',
-    price: {
-      rent: 28000,
-      fees: {
-        water: 1000,
-        energy: 2500,
-        services: 560,
-      },
-      currency: 'czk',
-    },
-    ownership: 'personal',
-    condition: 'renovated',
-    status: 'free',
-    floor: 3,
-  };
-  let total = apartment.area.floorage + apartment.area.balcony;
-  console.log(total);
-  document.body.innerHTML += "<p>Vymera bytu: apartment: "+ apartment.area.floorage + apartment.area.units +"</br> balcony: "+apartment.area.balcony + apartment.area.units+ "</p>"
-  document.body.innerHTML += "<p>Celkova plocha bytu je:" + total + "sqm </p>"
-  document.body.innerHTML += apartment.area.floorage + apartment.area.balcony
+// -------------------Cvičení 3: Realitka
+// const apartment = {
+//     type: 'rent',
+//     disposition: '3+1',
+//     area: {
+//       floorage: 100,
+//       balcony: 2,
+//       units: 'sqm',
+//     },
+//     city: 'Prague',
+//     district: 'Old Town',
+//     price: {
+//       rent: 28000,
+//       fees: {
+//         water: 1000,
+//         energy: 2500,
+//         services: 560,
+//       },
+//       currency: 'czk',
+//     },
+//     ownership: 'personal',
+//     condition: 'renovated',
+//     status: 'free',
+//     floor: 3,
+//   };
+  
+// document.body.innerHTML += "<p> Dispozice bytu je: " + apartment.disposition + "</p> <br>";
+// document.body.innerHTML += "<p> čistý nájem bez poplatků je: " + apartment.price.rent + " " + apartment.price.currency + "</p> <br>";
+// document.body.innerHTML += "<p> výměru bytu je: 1. Floorage: " + apartment.area.floorage + " " + apartment.area.units + "; " + "2. Balcony je: " + apartment.area.balcony + " " + apartment.area.units + "</p> <br>";
 
-  //   document.body.innerHTML += "<p>Dispozice: "+ apartment.disposition +"</p>"
-//   document.body.innerHTML += "<p>Najem bez poplatku: "+ apartment.price.rent +"</p>"
-//   document.body.innerHTML += "<p>Vymera bytu: "+ apartment.area.floorage + apartment.area.units +"</p>"
-//   ​
-//   const city = apartment.city;
-//   const district = apartment.district;
-//   ​
-//   document.body.innerHTML += "<p>Mesto: "+ city +"</p>"
-//   document.body.innerHTML += "<p>Mestska cast: "+ district +"</p>"
-//   ​
-//   apartment.status = "taken"
-//   document.body.innerHTML += "<p>Stav inzeratu: "+ apartment.status +"</p>"
+// const city = apartment.city;
+// const cityArea = apartment.district;
+// document.body.innerHTML += "<p> město je: " + city + ", a městska část " + cityArea +  "</p>";
+
+// apartment.status = 'taken';
+// document.body.innerHTML += "<p> Novy status je " + apartment.status + "</p>";
 
 // -------------------Cvičení 4: Knihovna
 // const book = {
@@ -101,6 +112,8 @@ const apartment = {
 //       },
 //     },
 //   }
+
+
 // -------------------Cvičení 5: Očkování – objekty
 // const person = {
 //     name: prompt("Jaké je vaše jméno a příjmení?"),
@@ -111,6 +124,8 @@ const apartment = {
 //   document.body.innerHTML += "<p>Zadané jméno: " + person.name + ", váš věk: " + person.age + "</p>";
 //   document.body.innerHTML += "<p>Váš jazyk: " + person.language + "</p>";
 //   document.body.innerHTML += "<p>Byli jste zaregistrováni na očkování.</p>";
+
+
 
 // -------------------Doporučené úložky na doma Cvičení 1: Formátovač data
 // const den = prompt('Zadej den:');
@@ -126,6 +141,8 @@ const apartment = {
 //   rok +
 //   '</span></p>';
 
+
+
 // -------------------Doporučené úložky na doma Cvičení 2: Fahrnheit vs. Celsius
 // const fahrnheit = prompt('Zadej teplotu ve stupních Fahrenheita:');
 
@@ -135,6 +152,8 @@ const apartment = {
 //   ' stupňů Fahrenheita = ' +
 //   Math.round((5 * (fahrnheit - 32)) / 9) +
 //   ' stupňů Celsia';
+
+
 
 // -------------------Doporučené úložky na doma Cvičení 3: Letenka
 // const flight = {
@@ -212,5 +231,10 @@ const apartment = {
 //     Math.ceil(flight.bags_price[2] * flight.conversion.EUR) +
 //     ' Kč</p>';
 
-// -------------------Doporučené úložky na doma Cvičení 4: Velikost okna
 
+// -------------------Doporučené úložky na doma Cvičení 4: Velikost okna
+// console.log(window.outerWidth);
+// console.log(window.outerHeight); // Toto je plná výška/šířka okna, které vidíme, včetně všech prvků rozhraní (karty, panel nástrojů atd.).
+
+// console.log(window.innerWidth);
+// console.log(window.innerHeight); // toto je část okna, kde je zobrazena webová stránka (viewport).
